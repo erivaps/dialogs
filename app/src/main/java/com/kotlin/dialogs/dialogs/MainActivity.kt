@@ -47,15 +47,18 @@ class MainActivity : AppCompatActivity() {
         slider.setOnSeekBarChangeListener(object :SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
 
+                valor.text = "cambiando " + progress.toString()
 
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
 
+                valor.text = "inicio " + slider.progress
             }
 
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
 
+                valor.text = "final " + slider.progress
             }
         })
 
